@@ -4,12 +4,12 @@ Shared Python package for Nexow microservices.
 
 ## Installation
 
+With uv (recommended):
 ```bash
-pip install git+ssh://git@github.com/nexow-ai/nexow-shared.git@main
+uv pip install git+ssh://git@github.com/nexow-ai/nexow-shared.git@main
 ```
 
 Or add to `pyproject.toml`:
-
 ```toml
 dependencies = [
     "nexow-shared @ git+ssh://git@github.com/nexow-ai/nexow-shared.git@main"
@@ -42,16 +42,23 @@ trade = Trade(symbol="EUR_USD", quantity=1000, price=1.0850)
 ## Development
 
 ```bash
-# Install with dev dependencies
-pip install -e ".[dev]"
+# Install with uv (10-100x faster!)
+uv sync
 
 # Run tests
-pytest
+uv run pytest
 
 # Lint
-ruff check .
+uv run ruff check .
 ```
 
 ## Version
 
 0.1.0
+
+## Benefits of uv
+
+- ⚡ 10-100x faster than pip
+- 🔒 Lock files for reproducible builds
+- 🎯 Better dependency resolution
+- 🚀 Works great with Railway deployment
