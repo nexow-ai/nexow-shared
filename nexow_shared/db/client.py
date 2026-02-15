@@ -7,7 +7,7 @@ from typing import Any
 import structlog
 from supabase import Client, create_client
 
-from nexow.config import settings
+from nexow_shared.config import settings
 
 logger = structlog.get_logger(__name__)
 

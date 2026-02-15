@@ -18,8 +18,8 @@ import pandas as pd
 import structlog
 import ta
 
-from nexow.broker.models import Candle
-from nexow.rules.schema import Condition, RuleGroup, TradingRules
+from nexow_shared.broker.models import Candle
+from nexow_shared.rules.schema import Condition, RuleGroup, TradingRules
 
 logger = structlog.get_logger(__name__)
 
